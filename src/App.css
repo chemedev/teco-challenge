@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+.card {
+  height: 300px;
+  width: 300px;
+}
+
+.card__temp {
+  width: 100px;
+}
+
+select {
+  width: 300px;
+}
+
+.selectWrapper {
+  position: relative;
+}
+
+.selectWrapper::after {
+  content: "▽";
+  color: #fff;
+  position: absolute;
+  right: 16px;
+  top: 50%;
+  transform: translateY(-50%) scale(1.5);
+  transition: transform 200ms;
+}
+
+.rotateIcon::after {
+  transform: translateY(-50%) rotate(180deg);
+  transition: transform 300ms;
+}
